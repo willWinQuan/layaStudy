@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="./laya.js"></script>
+    <script>
+      class Sprite_DrawPath {
+        constructor() {
+            const 
+                Browser = Laya.Browser,
+                WebGL = Laya.WebGL,
+                Stage = Laya.Stage;
+
+            // 不支持WebGL时自动切换至Canvas
+            Laya.init(Browser.clientWidth, Browser.clientHeight, WebGL);
+
+            Laya.stage.alignV = Stage.ALIGN_MIDDLE;
+            Laya.stage.alignH = Stage.ALIGN_CENTER;
+
+            Laya.stage.scaleMode = Stage.SCALE_SHOWALL;
+            Laya.stage.bgColor = "#232628";
+
+            this.drawPentagram();
+        }
+
+        drawPentagram() {
+            let canvas = new Laya.Sprite();
+            Laya.stage.addChild(canvas);
+            
+            let path = [];
+            path.push(0, -130);
+            path.push(33, -33);
+            path.push(137, -30);
+            path.push(55, 32);
+            path.push(85, 130);
+            path.push(0, 73);
+            path.push(-85, 130);
+            path.push(-55, 32);
+            path.push(-137, -30);
+            path.push(-33, -33);
+            
+            /**
+              drawPoly(x: number, y: number, points: any[], fillColor: any, lineColor?: any, lineWidth?: number): DrawPolyCmd
+              绘制多边形
+              x: number
+              开始绘制的 X 轴位置。
+              y: number
+              开始绘制的 Y 轴位置。
+              points: any[]
+              多边形的点集合。
+              fillColor: any
+              填充颜色，或者填充绘图的渐变对象。
+              Default value lineColor: any = null
+             （可选）边框颜色，或者填充绘图的渐变对象。
+              Default value lineWidth: number = 1
+             （可选）边框宽度。
+            **/
+            canvas.graphics.drawPoly(Laya.stage.width / 2, Laya.stage.height / 2, path, "#FF7F50");
+        }
+    }
+
+    new Sprite_DrawPath();
+    </script>
+</body>
+</html>

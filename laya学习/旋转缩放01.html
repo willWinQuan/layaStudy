@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+   <script src="./laya.js"></script> 
+   <script>
+      class Sprite_RoateAndScale {
+        constructor() {
+            const 
+                Browser = Laya.Browser,
+                WebGL = Laya.WebGL,
+                Stage = Laya.Stage;
+
+            // 不支持WebGL时自动切换至Canvas
+            Laya.init(Browser.clientWidth, Browser.clientHeight, WebGL);
+            
+            //alignV:垂直对齐方式。默认值为"top"。 
+            //"top" ：居顶部对齐；"middle" ：居中对齐；"bottom" ：居底部对齐；
+            
+            /**
+             *alignH:水平对齐方式。默认值为"left"
+                "left" ：居左对齐；
+                "center" ：居中对齐；
+                "right" ：居右对齐；
+            */
+
+            /**
+             Stage.ALIGN_MIDDLE:
+             ALIGN_MIDDLE: string = "middle"
+             画布垂直居中对齐
+            */
+            /**
+             Stage.ALIGN_CENTER:
+             ALIGN_CENTER: string = "center"
+             画布水平居中对齐
+            */
+            Laya.stage.alignV = Stage.ALIGN_MIDDLE;
+            Laya.stage.alignH = Stage.ALIGN_CENTER;
+
+            Laya.stage.scaleMode = Stage.SCALE_SHOWALL;
+            Laya.stage.bgColor = "#232628";
+
+            this.showApe();
+        }
+
+        showApe() {
+            this.ape = new Laya.Sprite();
+            Laya.stage.addChild(this.ape);
+            this.ape.loadImage("images/猪0.png");
+            this.ape.pivot(55, 72).pos(Laya.stage.width / 2,Laya.stage.height / 2);
+            // this.ape.pos( Laya.stage.width / 2, Laya.stage.height / 2);
+            // this.ape.x = Laya.stage.width / 2;
+            // this.ape.y = Laya.stage.height / 2;
+
+            this.scaleDelta = 0;
+            Laya.timer.frameLoop(1, this, this.animate);
+        }
+
+        animate() {
+            this.ape.rotation += 2;
+
+            //心跳缩放
+            /**
+             scale
+             scale(scaleX: number, scaleY: number, speedMode?: boolean): Sprite
+             设置缩放
+             speedMode （可选）是否极速模式，正常是调用this.scaleX=value进行赋值，极速模式直接调用内部函数处理，
+             如果未重写scaleX,scaleY属性，建议设置为急速模式性能更高
+            */
+            this.scaleDelta += 0.02;
+            let scaleValue = Math.sin(this.scaleDelta);
+            this.ape.scale(scaleValue, scaleValue);
+        }
+    }
+
+    new Sprite_RoateAndScale();
+   </script>
+</body>
+</html>

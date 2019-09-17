@@ -24,7 +24,7 @@
                 Laya.stage.alignH = Stage.ALIGN_CENTER;
 
                 Laya.stage.scaleMode = Stage.SCALE_SHOWALL;
-                Laya.stage.bgColor = "#232628";
+                Laya.stage.bgColor = "#fff";
 
                 this.showApe();
             }
@@ -33,30 +33,43 @@
                 const 
                     Sprite = Laya.Sprite;
                 // Math.PI 圆周率=3.14=180°
+                // layoutRadius 圆半径
                 const 
-                    layoutRadius = 150,
-                    radianUnit = Math.PI / 2;
+                    layoutRadius = 100,
+                    radianUnit = Math.PI / 2; //90°
                 // 该容器用于装载4张猩猩图片
                 this.apesCon = new Sprite();
                 Laya.stage.addChild(this.apesCon);
 
-                // 添加4张猩猩图片
+                //  添加4张猩猩图片
+                //  sprite.pivot(x,y) 轴心点 
+                //  pos 设置坐标位置
+                //  Math.cos(radianUnit * i) * layoutRadius  radianUnit * i角度在半径layoutRadius的圆位置x坐标
+                //  Math.sin(radianUnit * i) * layoutRadius  radianUnit * i角度在半径layoutRadius的圆位置Y坐标
                 let ape;
                 for (let i = 0; i < 4; i++) {
                     ape = new Sprite();
                     this.apesCon.addChild(ape);
                     ape.loadImage(`images/猪${i}.png`);
-                    ape.pivot(55, 72).pos(
+                    
+                    //设置四个图在轴中心为34,32，半径layoutRadius:150的圆角度为90的四个点上
+                    ape.pivot(34,32).pos(
                         Math.cos(radianUnit * i) * layoutRadius,
                         Math.sin(radianUnit * i) * layoutRadius
                     );
                 }
+
+                //Timer 是时钟管理类。它是一个单例，不要手动实例化此类，应该通过 Laya.timer 访问。
+                //frameLoop(delay: number, caller: any, method: Function, args?: any[], coverBefore?: boolean): void
+                //delay-间隔几帧(单位为帧) caller-执行域(this) method-定时器回调函数 args-回调参数  coverBefore-是否覆盖之前的延迟执行，默认为 true 
+                //frameLoop 定时重复执行某函数(基于帧率)
 
                 this.apesCon.pos(Laya.stage.width / 2, Laya.stage.height / 2);
                 Laya.timer.frameLoop(1, this, this.animate);
             }
 
             animate() {
+                //rotation 旋转sprite 对象 默认值为0。以角度为单位
                 this.apesCon.rotation += 1;
             }
         }
