@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="./laya.js"></script>
+    <script>
+        class Sprite_DisplayImage {
+            constructor() {
+                const 
+                    Browser = Laya.Browser,
+                    WebGL = Laya.WebGL,
+                    Stage = Laya.Stage;
+                console.log(Stage)
+                console.log(Laya.stage)
+                // 不支持WebGL时自动切换至Canvas
+                Laya.init(Browser.clientWidth, Browser.clientHeight, WebGL);
+
+                console.log(Laya.stage)
+                console.log(Stage)
+                Laya.stage.alignV = Stage.ALIGN_MIDDLE;
+                Laya.stage.alignH = Stage.ALIGN_CENTER;
+
+                /**
+                 * stage 舞台
+                 * scaleMode 设置舞台适配
+                 * SCALE_SHOWALL 应用显示全部内容，按照最小比率缩放，等比缩放不变形，一边可能会留空白，stage的宽高等于设计宽高。
+                */
+                Laya.stage.scaleMode = Stage.SCALE_SHOWALL;
+                Laya.stage.bgColor = "#232628";
+
+                this.showApe();
+            }
+
+            showApe() {
+                const 
+                    monkey1Path = "./images/小鸟.png",
+                    monkey2Path = "./images/小熊.png";
+
+                // 方法1：使用loadImage
+                /**
+                 * Sprite 是基本的显示图形的显示列表节点。 
+                 * Sprite 默认没有宽高，默认不接受鼠标事件。
+                 * 通过 graphics 可以绘制图片或者矢量图，支持旋转，缩放，位移等操作。
+                 * Sprite同时也是容器类，可用来添加多个子节点。
+                 * loadImage(url: string, complete?: Handler) complete加载完成回调可选
+                 */
+                let ape = new Laya.Sprite();
+                Laya.stage.addChild(ape);
+                ape.loadImage(monkey1Path);
+
+                // 方法2：使用drawTexture  把截图绘制到精灵上
+                // Laya.loader.getRes(url:string) 获取指定资源地址的资源
+                Laya.loader.load(monkey2Path, Laya.Handler.create(this, function() {
+                    let monkey2 = Laya.loader.getRes(monkey2Path);
+                    let ape2 = new Laya.Sprite();
+                    Laya.stage.addChild(ape2);
+                    ape2.graphics.drawTexture(monkey2, 100, 0);
+                }));
+            }
+        }
+
+        new Sprite_DisplayImage();
+    </script>
+</body>
+</html>
