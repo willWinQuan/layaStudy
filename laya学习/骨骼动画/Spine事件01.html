@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="../laya.js"></script>
+    <script src="../laya.ani.js"></script>
+    <script>
+       let 
+        mFactory,
+        mArmature,
+        mStartX = 400,
+        mStartY = 500,
+        mCurrIndex = 0,
+        mLabelSprite;
+
+        class Skeleton_SpineEvent {
+            constructor() {
+                const 
+                    Browser = Laya.Browser,
+                    WebGL = Laya.WebGL,
+                    Stage = Laya.Stage,
+                    Stat = Laya.Stat,
+                    Sprite = Laya.Sprite;
+
+                // 不支持WebGL时自动切换至Canvas
+                Laya.init(Browser.clientWidth, Browser.clientHeight, WebGL);
+
+                Laya.stage.alignV = Stage.ALIGN_MIDDLE;
+                Laya.stage.alignH = Stage.ALIGN_CENTER;
+
+                Laya.stage.scaleMode = Stage.SCALE_SHOWALL;
+                Laya.stage.bgColor = "#ffffff";
+
+                mLabelSprite = new Sprite();
+                Stat.show();
+                this.startFun();
+            }
+
+            startFun() {
+                const 
+                    Templet = Laya.Templet,
+                    Event = Laya.Event;
+                const mAniPath = "./alien.sk";
+
+                mFactory = new Templet();
+                mFactory.on(Event.COMPLETE, this, this.parseComplete);
+                mFactory.on(Event.ERROR, this, this.onError);
+                mFactory.loadAni(mAniPath);
+            }
+
+            onError() {
+                trace("error");
+            }
+
+            parseComplete() {
+                const Event = Laya.Event;
+                // 创建模式为1，使用动画自己的缓冲区，可以启用换装(相当耗费内存)
+                //event.LABEL 定义 label 事件对象的 type 属性值
+                mArmature = mFactory.buildArmature(1);
+                Laya.stage.addChild(mArmature);
+                mArmature.pos(mStartX, mStartY);
+                mArmature.scale(0.5, 0.5);
+                mArmature.on(Event.LABEL, this, this.onEvent);
+                mArmature.on(Event.STOPPED, this, this.completeHandler);
+                this.play();
+            }
+
+            completeHandler() {
+                this.play();
+            }
+
+            play() {
+                mCurrIndex++;
+                let aniNum = mArmature.getAnimNum();
+                if (mCurrIndex >= aniNum) {
+                    mCurrIndex = 0;
+                }
+                mArmature.play(mCurrIndex, false);
+            }
+
+            onEvent(e) {
+                // Tween 是一个缓动类。使用此类能够实现对目标对象属性的渐变。
+                // Handler 是事件处理器类。
+                // graphics 用于创建绘图显示对象
+                /**
+                 * fillText(text: string, x: number, y: number, font: string, color: string, textAlign: string): FillTextCmd
+                 * text: string 在画布上输出的文本。
+                 * x: number 开始绘制文本的 x 坐标位置（相对于画布）。
+                 * y: number 开始绘制文本的 y 坐标位置（相对于画布）。
+                 * font: string 定义字号和字体，比如"20px Arial"。
+                 * color: string 定义文本颜色，比如"#ff0000"。
+                 * textAlign: string 文本对齐方式，可选值："left"，"center"，"right"。
+                 * ***/
+
+                const 
+                    Tween = Laya.Tween,
+                    Handler = Laya.Handler;
+                let tEventData = e;
+                
+                /**
+                 * to(target: any, props: any, duration: number, ease?: Function, complete?: Handler, delay?: number, coverBefore?: boolean): Tween
+                 * 缓动对象的props属性到目标值。
+                 * target: any 目标对象(即将更改属性值的对象)。
+                 * props: any 变化的属性列表，比如{x:100,y:20,ease:Ease.backOut,complete:Handler.create(this,onComplete),update:new Handler(this,onComplete)}。
+                 * duration: number 花费的时间，单位毫秒。
+                 * ease: Function = null 缓动类型，默认为匀速运动。
+                 * complete: Handler = null 结束回调函数。
+                 * delay: number = 0 延迟执行时间。
+                 * coverBefore: boolean = false 是否覆盖之前的缓动。
+                 */
+                Laya.stage.addChild(mLabelSprite);
+                mLabelSprite.pos(mStartX, mStartY);
+                mLabelSprite.graphics.fillText(tEventData.name, 0, 0, "20px Arial", "#ff0000", "center");
+                Tween.to(mLabelSprite, { y: mStartY - 200 }, 1000, null, Handler.create(this, this.playEnd))
+            }
+
+            playEnd() {
+                mLabelSprite.removeSelf();
+            }
+        }
+
+        new Skeleton_SpineEvent();
+    </script>
+</body>
+</html>
