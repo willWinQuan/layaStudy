@@ -35,12 +35,14 @@
             
             createAnimation() {
                 const Animation = Laya.Animation;
+
                 let ani = new Animation();
                 Laya.stage.addChild(ani);
                 ani.loadAtlas(aniConfPath);	// 加载图集动画
                 ani.interval = 30;			// 设置播放间隔（单位：毫秒）
-                ani.index = 1;				// 当前播放索引
-                ani.play();					// 播放图集动画
+                ani.index = 0;	
+            			// 当前播放索引
+                // ani.play();					// 播放图集动画
 
                 // 获取动画的边界信息
                 let bounds = ani.getGraphicBounds();

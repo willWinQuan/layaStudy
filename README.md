@@ -39,3 +39,7 @@ for(var times=0; times<60; times++) {
        var Y = b - Math.cos(hudu) * r    //  注意此处是“-”号，因为我们要得到的Y是相对于（0,0）而言的。
 
 }
+
+# 骨骼动画
+  骨骼动画由Templet，AnimationPlayer，Skeleton三部分组成。
+  
