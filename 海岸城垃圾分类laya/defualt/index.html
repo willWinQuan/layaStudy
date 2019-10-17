@@ -1,0 +1,199 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>index</title>
+        <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <meta equiv="Expires" content="0" />
+        <meta id="eqMobileViewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <script>/*<![CDATA[*/
+            (function () {
+                function setViewport(w) {
+                    var scale = parseInt(window.screen.width) / w, a = /Android (\d+\.\d+)/.test(navigator.userAgent) ? 2.3 >= parseFloat(RegExp.$1) ? 'width='+w+', target-densitydpi=device-dpi' : 'width='+w+', minimum-scale = ' + scale + ', maximum-scale = ' + scale + ', target-densitydpi=device-dpi' : 'width='+w+', user-scalable=no, target-densitydpi=device-dpi';
+                    document.getElementById('eqMobileViewport').setAttribute('content',a);
+                }
+                function resize() {
+                    setTimeout(function () {
+                        setViewport(640);
+                    },50);
+                }
+                setViewport(640);
+                window.addEventListener('resize', resize, false);
+                window.addEventListener('orientationchange', resize, false);
+            })();
+            var sysParam = {
+                baseUrl: '',//*插件的基本资源路径
+                isAttention: '<?php echo $isSubscribe;?>',//*用户是否已关注
+                version: "?r",//版本
+                musicUrl: "" //音频路径
+            }
+/*]]>*/</script>
+       
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/animation.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <section id="app">
+            <!--加载-->
+            <transition name="fade">
+                <section class="loading" id="loading" v-show="loading">
+                    <div class="loadingBox">
+                        <p><img class="" src="images/logo.png"></p>
+                        <span class="l-1">i</span>
+                        <span class="l-2">-</span>
+                        <span class="l-3">l</span>
+                        <span class="l-4">z</span>
+                        <span class="l-5">.</span>
+                        <span class="l-6">c</span>
+                        <span class="l-7">n</span>
+                        <div class="loadingLine">
+                            <div></div>
+                        </div>
+                    </div>
+                </section>
+                <!--<?php $this->widget('application.widgets.AddonLoadingAnime', array(-->
+                <!--'activity'=>$this->activity,-->
+                <!--'logo'=>empty($settings['loadingImg']) ? $this->DSURL('/images/logo.png') : $settings['loadingImg'],-->
+                <!--'text'=>'',-->
+                <!--'background'=>'#000',-->
+                <!--'addClass'=>'',-->
+                <!--'id'=>'',-->
+                <!--'ext'=> 'v-show="loading"'-->
+                <!--));?>-->
+            </transition>
+            <section v-cloak class="body">
+
+                <transition-group name="fade">
+                    <!--首页-->
+                    <section class="index" key="fade" v-show="page.index">
+                        <img src="images/index/indexBg.png" class="indexBg" />
+                        <img src="images/index/themTitle.png" class="themTitle" />
+                        <img src="images/index/hearter.png" class="hearter" />
+                        <img src="images/index/beginBtn.png" class="btn beginBtn" @click="pageShow('game')"/>
+                    </section>
+                    
+                    <!-- 垃圾分类页面 -->
+                    <section class="gamePage" key="fade" v-show="page.game">
+                        <img src="images/gamePage/gamePageBg.png" class="gamePageBg" />
+                        <div class="orderBox">
+                            <img src="images/gamePage/orderBox/order01.png" class="order01" />
+                            <img src="images/gamePage/orderBox/order02.png" class="order02" />
+                            <img src="images/gamePage/orderBox/order03.png" class="order03" />
+                            <img src="images/gamePage/orderBox/order04.png" class="order04" />
+                            <img src="images/gamePage/orderBox/order05.png" class="order05" />
+                            <img src="images/gamePage/orderBox/order06.png" class="order06" />
+                            <img src="images/gamePage/orderBox/order07.png" class="order07" />
+                            <img src="images/gamePage/orderBox/order08.png" class="order08" />
+                            <img src="images/gamePage/orderBox/order09.png" class="order09" />
+                            <img src="images/gamePage/orderBox/order10.png" class="order10" />
+                            <img src="images/gamePage/orderBox/orderToal.png" class="orderToal" />
+                        </div>
+                        <div class="trash">
+                            <img src="images/gamePage/trash/trash04.png" class="trash04" />
+                            <img src="images/gamePage/trash/trash03.png" class="trash03" />
+                            <img src="images/gamePage/trash/trash02.png" class="trash02" />
+                            <img src="images/gamePage/trash/trash01.png" class="trash01" />
+                        </div>
+                        <div class="goodsBox">
+                            <div class="question02">
+                                <img src="images/gamePage/goodsBox/question02/questionImg.png" class="questionImg" />
+                                <img src="images/gamePage/goodsBox/question02/questionImg1.png" class="questionImg1" />
+                                <img src="images/gamePage/goodsBox/question02/questionImg0.png" class="questionImg0" />
+                                <img src="images/gamePage/goodsBox/question02/questionTitle.png" class="questionTitle" />
+                            </div>
+                            <div class="question01">
+                                <img src="images/gamePage/goodsBox/question01/questionImg.png" class="questionImg" />
+                                <img src="images/gamePage/goodsBox/question01/questionTitle.png" class="questionTitle" />
+                            </div>
+                        </div>
+                        <img src="images/gamePage/hand.png" class="hand" />
+                        <div class="gameTip">
+                            <img src="images/gamePage/gameTip/gameTipBg.png" class="gameTipBg" />
+                            <img src="images/gamePage/gameTip/konwBtn.png" class="btn konwBtn"/>
+                        </div>
+                    </section>
+                    
+                    <!-- 垃圾分类结果页面 -->
+                    <section class="answerList" key="fade" v-show="page.answerList">
+                        <img src="images/answerList/answerListBg.png" class="answerListBg" />
+                        <img src="images/answerList/lookPostBtn.png" class="lookPostBtn" />
+                        <div class="listBox">
+                            <div class="listItem">
+                                <img src="images/answerList/listBox/listItem/trueImg.png" class="trueImg" />
+                                <img src="images/answerList/listBox/listItem/errorImg.png" class="errorImg" />
+                                <img src="images/answerList/listBox/listItem/itemType01.png" class="itemType01" />
+                                <img src="images/answerList/listBox/listItem/itemType02.png" class="itemType02" />
+                                <img src="images/answerList/listBox/listItem/itemType03.png" class="itemType03" />
+                                <img src="images/answerList/listBox/listItem/itemType04.png" class="itemType04" />
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- 海报页面 -->
+                    <section class="postPage" key="fade" v-show="page.post">
+                        <img src="images/postPage/postPageBg.png" class="postPageBg" />
+                        <img src="images/postPage/themText.png" class="themText" />
+                        <div class="userInfo">
+                            <img src="images/postPage/userInfo/userImg.png" class="userImg" />
+                        </div>
+                        <img src="images/postPage/againBtn.png" class="againBtn" />
+                        <img src="images/postPage/getPostBtn.png" class="getPostBtn" />
+                        <img src="images/postPage/rankingNum.png" class="rankingNum" />
+                        <div class="postBox">
+                            <img src="images/postPage/postBox/postPageBg.png" class="postPageBg" />
+                            <img src="images/postPage/postBox/themText.png" class="themText" />
+                            <div class="userInfo">
+                                <img src="images/postPage/postBox/userInfo/userImg.png" class="userImg" />
+                            </div>
+                            <img src="images/postPage/postBox/rankingNum.png" class="rankingNum" />
+                            <img src="images/postPage/postBox/qrcodeBg.png" class="qrcodeBg" />
+                            <img src="images/postPage/postBox/qrcodeImg.png" class="qrcodeImg" />
+                        </div>
+                    </section>
+                </transition-group>
+                
+                <transition-group name="dialog">
+                    <!-- 海报查看 -->
+                    <div class="postAlert" key="fade" v-show="pop.postAlert">
+                        <div class="postImgBox">
+                            <img src="images/postAlert/postImgBox/postImg.png" class="postImg" />
+                        </div>
+                        <img src="images/postAlert/postTip.png" class="postTip" />
+                        <img src="images/postAlert/postAlertColseBtn.png" class="postAlertColseBtn" />
+                    </div>
+                </transition-group>
+
+                <transition-group name="fade">
+                    <!--弹窗黑层-->
+                    <section class="popupBg" key="fade" v-show="popupBg || pop.isEnd"></section>
+                </transition-group>
+                
+                <transition-group name="fade">
+                    <div key="fade" class="fadeAlert" v-show="fAlert.show" v-html="fAlert.text"></div>
+                    <section key="fade" class="load" id="load" v-show="ajaxLoading">
+                        <div id="loading-center">
+                            <div id="loading-center-absolute">
+                                <div class="object" id="object_one"></div>
+                                <div class="object" id="object_two" style="left:20px;"></div>
+                                <div class="object" id="object_three" style="left:40px;"></div>
+                                <div class="object" id="object_four" style="left:60px;"></div>
+                                <div class="object" id="object_five" style="left:80px;"></div>
+                            </div>
+                        </div>
+                    </section>
+                </transition-group>
+            </section>
+        </section>
+        
+        <script src="//res1.i-lz.cn/plugin/vue.min.js"></script>
+        <script src="//res1.i-lz.cn/plugin/iscroll.js"></script>
+        <script src="//res1.i-lz.cn/plugin/zepto.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

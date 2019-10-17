@@ -1,0 +1,76 @@
+{
+    "frames": {
+        "140001.png": {
+            "frame": {
+                "h": 275,
+                "idx": 0,
+                "w": 215,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 352,
+                "w": 314
+            },
+            "spriteSourceSize": {
+                "x": 53,
+                "y": 43
+            }
+        },
+        "140002.png": {
+            "frame": {
+                "h": 273,
+                "idx": 0,
+                "w": 207,
+                "x": 0,
+                "y": 276
+            },
+            "sourceSize": {
+                "h": 352,
+                "w": 314
+            },
+            "spriteSourceSize": {
+                "x": 55,
+                "y": 41
+            }
+        },
+        "140003.png": {
+            "frame": {
+                "h": 267,
+                "idx": 0,
+                "w": 214,
+                "x": 216,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 352,
+                "w": 314
+            },
+            "spriteSourceSize": {
+                "x": 57,
+                "y": 39
+            }
+        },
+        "140004.png": {
+            "frame": {
+                "h": 281,
+                "idx": 0,
+                "w": 220,
+                "x": 208,
+                "y": 276
+            },
+            "sourceSize": {
+                "h": 352,
+                "w": 314
+            },
+            "spriteSourceSize": {
+                "x": 55,
+                "y": 41
+            }
+        }
+    },
+    "meta": {
+        "image": "goods7.png",
+        "prefix": "goods7/"
+    }
+}

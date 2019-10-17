@@ -1,0 +1,76 @@
+{
+    "frames": {
+        "21-10001.png": {
+            "frame": {
+                "h": 308,
+                "idx": 0,
+                "w": 172,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 352,
+                "w": 314
+            },
+            "spriteSourceSize": {
+                "x": 79,
+                "y": 25
+            }
+        },
+        "21-10002.png": {
+            "frame": {
+                "h": 308,
+                "idx": 0,
+                "w": 169,
+                "x": 173,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 352,
+                "w": 314
+            },
+            "spriteSourceSize": {
+                "x": 79,
+                "y": 26
+            }
+        },
+        "21-10003.png": {
+            "frame": {
+                "h": 307,
+                "idx": 0,
+                "w": 169,
+                "x": 343,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 352,
+                "w": 314
+            },
+            "spriteSourceSize": {
+                "x": 75,
+                "y": 27
+            }
+        },
+        "21-10004.png": {
+            "frame": {
+                "h": 308,
+                "idx": 0,
+                "w": 169,
+                "x": 513,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 352,
+                "w": 314
+            },
+            "spriteSourceSize": {
+                "x": 79,
+                "y": 26
+            }
+        }
+    },
+    "meta": {
+        "image": "goods200.png",
+        "prefix": "goods200/"
+    }
+}

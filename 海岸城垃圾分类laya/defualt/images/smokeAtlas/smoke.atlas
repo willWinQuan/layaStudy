@@ -1,0 +1,127 @@
+{
+    "frames": {
+        "1.png": {
+            "frame": {
+                "h": 89,
+                "idx": 0,
+                "w": 152,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 176
+            },
+            "spriteSourceSize": {
+                "x": 5,
+                "y": 68
+            }
+        },
+        "2.png": {
+            "frame": {
+                "h": 111,
+                "idx": 0,
+                "w": 163,
+                "x": 0,
+                "y": 90
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 176
+            },
+            "spriteSourceSize": {
+                "x": 9,
+                "y": 44
+            }
+        },
+        "3.png": {
+            "frame": {
+                "h": 129,
+                "idx": 0,
+                "w": 161,
+                "x": 0,
+                "y": 202
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 176
+            },
+            "spriteSourceSize": {
+                "x": 7,
+                "y": 31
+            }
+        },
+        "4.png": {
+            "frame": {
+                "h": 138,
+                "idx": 0,
+                "w": 167,
+                "x": 162,
+                "y": 202
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 176
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 27
+            }
+        },
+        "5.png": {
+            "frame": {
+                "h": 145,
+                "idx": 0,
+                "w": 171,
+                "x": 330,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 176
+            },
+            "spriteSourceSize": {
+                "x": 5,
+                "y": 21
+            }
+        },
+        "6.png": {
+            "frame": {
+                "h": 148,
+                "idx": 0,
+                "w": 166,
+                "x": 330,
+                "y": 146
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 176
+            },
+            "spriteSourceSize": {
+                "x": 9,
+                "y": 15
+            }
+        },
+        "7.png": {
+            "frame": {
+                "h": 139,
+                "idx": 0,
+                "w": 160,
+                "x": 164,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 173,
+                "w": 176
+            },
+            "spriteSourceSize": {
+                "x": 13,
+                "y": 16
+            }
+        }
+    },
+    "meta": {
+        "image": "smoke.png",
+        "prefix": "smoke/"
+    }
+}

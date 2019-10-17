@@ -1,0 +1,285 @@
+body{ margin: 0; padding: 0;} 
+section { width: 100%;  height: 100%;} 
+
+
+.loadPage{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.loadPage .loadBg{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+}
+.loadPage .loadLogo{
+    position: absolute;
+    top: 7%;
+    left: 125px;
+}
+.loadPage .loadContent{
+    position: absolute;
+    top: 15%;
+    left: 60px;
+}
+
+.toIndex{
+  position: absolute;
+  top:120px;
+  right:20px;
+  font-size:30px;
+  color:#fff;
+
+}
+
+.index{width:100%;height:100%;position:absolute;}
+
+.index .indexBg{left:0px;top:0%;position:absolute;height: 100%;}
+.index .logoImg{    
+    left: 180px;
+    top: 1.6%;
+    position: absolute;
+}
+.index .themTitle{left:125px;top:12.7%;position:absolute;}
+.index .hearter{left:278px;top: 24%;position:absolute;}
+.index .beginBtn{left:166px;top:81.4%;position:absolute;}
+.gamePage{width:100%;height:100%;position:absolute;}
+
+.gamePage .gamePageBg{left:0px;top:0px;width:100%;height:100%;position:absolute;}
+.gamePage .orderBox{left:0px;top:0%;position:absolute;}
+
+.gamePage .orderBox .order01{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order02{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order03{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order04{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order05{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order06{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order07{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order08{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order09{left:23px;top:111px;position:absolute;}
+.gamePage .orderBox .order10{left:25px;top:111px;position:absolute;}
+.gamePage .orderBox .orderToal{left:73px;top:110px;position:absolute;}
+.gamePage .trash{left:0px;top:0%;position:absolute;}
+
+.gamePage .trash .trash04{left:475px;top:717px;position:absolute;}
+.gamePage .trash .trash03{left:319px;top:717px;position:absolute;}
+.gamePage .trash .trash02{left:163px;top:717px;position:absolute;}
+.gamePage .trash .trash01{left:7px;top:717px;position:absolute;}
+.gamePage .goodsBox{left:0px;top:0%;position:absolute;}
+
+.gamePage .goodsBox .question02{left:0px;top:0%;position:absolute;}
+
+.gamePage .goodsBox .question02 .questionImg{left:235px;top:319px;position:absolute;}
+.gamePage .goodsBox .question02 .questionImg1{left:207px;top:323px;position:absolute;}
+.gamePage .goodsBox .question02 .questionImg0{left:376px;top:445px;position:absolute;}
+.gamePage .goodsBox .question02 .questionTitle{left:146px;top:164px;position:absolute;}
+.gamePage .goodsBox .question01{left:0px;top:0%;position:absolute;}
+
+.gamePage .goodsBox .question01 .questionImg{left:158px;top:332px;position:absolute;}
+.gamePage .goodsBox .question01 .questionTitle{left:166px;top:164px;position:absolute;}
+.gamePage .hand{left:420px;top:554px;position:absolute;}
+.gamePage .gameTip{left:0px;top:0px;width:640px;height:1008px;position:absolute;}
+
+.gamePage .gameTip .gameTipBg{left:0px;top:0px;width:100%;height:100%;position:absolute;}
+.gamePage .gameTip .konwBtn{left:229px;top:624px;position:absolute;}
+.answerList{width:100%;height:100%;position:absolute;}
+
+.answerList .answerListBg{left:0px;top:0px;width:100%;height:100%;position:absolute;}
+.answerList .lookPostBtn{left:175px;top:893px;position:absolute;z-index: 1;}
+.answerList .listBox{
+    left: 0px;
+    top: 2%;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.answerList .listBox .listItem{
+    width: 100%;
+    padding: 16px 8px;
+}
+.answerList .listBox .listItem .itemName{
+    word-break: keep-all;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+    width: 300px;
+}
+.listContent{
+    position: relative;
+    width: 82%;
+    margin: 0 auto;
+    height: 700px;
+    overflow-y: auto;
+    top: 145px;
+}
+
+ .postPage{width:100%;height:100%;position:absolute;}
+
+ .postPage .postPageBg{left:0px;top:0px;width:100%;height:100%;position:absolute;}
+ .postPage .postLogo{left:20px;top:0px;position:absolute;}
+ .postPage .themText{
+    left: 70px;
+    top: 25%;
+    position: absolute;}
+ .postPage .userInfo{left:0px;top: 5%;position:absolute;}
+
+.postPage .userInfo .userImg{
+    left: 271px;
+    top: 50px;
+    position: absolute;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+}
+.postPage .userInfo .userName{
+    left: 205px;
+    top: 155px;
+    position: absolute;
+    font-size: 24px;
+    width: 220px;
+    text-align: center
+}
+.postPage .againBtn{left:73px;bottom: 12%;position:absolute;}
+.postPage .getPostBtn{left:383px;bottom: 12%;position:absolute;}
+.postPage .rankingNum{
+    left: 270px;
+    top: 23.2%;
+    position: absolute;
+    width: 166px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff5959;
+    text-align: center;
+    text-shadow: 0 0 2px;
+}
+.postPage .postBox{left:0px;top:0%;position:absolute;width: 100%;height: 100%;}
+
+.postPage .postBox .postPageBg{left:0px;top:0px;position:absolute;}
+.postPage .postBox .postLogo{left:20px;top:0px;position:absolute;}
+.postPage .postBox .themText{left:70px;top: 25%;position:absolute;}
+.postPage .postBox .userInfo{left:0px;top: 5%;position:absolute;}
+
+.postPage .postBox .userInfo .userImg{
+    left: 271px;
+    top: 50px;
+    position: absolute;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+}
+.postPage .postBox .userInfo .userName{
+    left: 205px;
+    top: 155px;
+    position: absolute;
+    font-size: 24px;
+    width: 220px;
+    text-align: center
+}
+.postPage .postBox .rankingNum{
+    left: 270px;
+    top: 23.2%;
+    position: absolute;
+    width: 166px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff5959;
+    text-align: center;
+    text-shadow: 0 0 2px;
+}
+.postPage .postBox .qrcodeBg{
+    left: 393px;
+    position: absolute;
+    bottom: 6%;
+}
+ .postPage .postBox .qrcodeImg{left:510px;bottom: 7%;position:absolute;}
+ .postAlert{left:0px;top:0%;position:absolute;height: 100%;}
+
+ .postAlert .postImgBox{left:0px;top:0%;position:absolute;height: 100%;}
+
+ .postAlert .postImgBox .postImg{
+    left: 74px;
+    top: 83px;
+    position: absolute;
+    width: 475px;
+ }
+ .postAlert .postTip{left:227px;bottom: 6%;position:absolute;}
+ .postAlert .postAlertColseBtn{left:300px;bottom: 12%;position:absolute;}
+
+ .goodsErrorAlert04{left:83px;top:235px;width:471px;height:519px;position:absolute;}
+
+ .goodsErrorAlert04 .goodsErrorAlert04Bg{left:0px;top:0px;width:100%;height:100%;position:absolute;}
+ .goodsErrorAlert04 .alertContentBox{left:0px;top:0%;position:absolute;}
+
+ .goodsErrorAlert04 .alertContentBox .alertGoodsImg{left:150px;top:124px;position:absolute;}
+ .goodsErrorAlert04 .alertContentBox .alertContent{left:39px;top:367px;position:absolute;}
+ .goodsErrorAlert04 .alertContentBox .alertTitle{left:131px;top:18px;position:absolute;}
+ .goodsErrorAlert04 .alertcloseBtn{left:411px;top:11px;position:absolute;}
+ .goodsErrorAlert02{left:83px;top:235px;width:471px;height:519px;position:absolute;}
+
+ .goodsErrorAlert02 .goodsErrorAlert02Bg{left:0px;top:0px;width:100%;height:100%;position:absolute;}
+ .goodsErrorAlert02 .alertContentBox{left:0px;top:0%;position:absolute;}
+
+ .goodsErrorAlert02 .alertContentBox .alertGoodsImg{left:150px;top:124px;position:absolute;}
+ .goodsErrorAlert02 .alertContentBox .alertContent{left:39px;top:367px;position:absolute;}
+ .goodsErrorAlert02 .alertContentBox .alertTitle{left:178px;top:18px;position:absolute;}
+ .goodsErrorAlert02 .alertcloseBtn{left:411px;top:11px;position:absolute;}
+ .goodsErrorAlert03{left:83px;top:235px;width:471px;height:519px;position:absolute;}
+
+ .goodsErrorAlert03 .goodsErrorAlert03Bg{left:0px;top:0px;width:100%;height:100%;position:absolute;}
+ .goodsErrorAlert03 .alertContentBox{left:0px;top:0%;position:absolute;}
+
+ .goodsErrorAlert03 .alertContentBox .alertGoodsImg{left:150px;top:124px;position:absolute;}
+ .goodsErrorAlert03 .alertContentBox .alertContent{left:39px;top:367px;position:absolute;}
+ .goodsErrorAlert03 .alertContentBox .alertTitle{left:178px;top:18px;position:absolute;}
+ .goodsErrorAlert03 .alertcloseBtn{left:411px;top:11px;position:absolute;}
+ .goodsErrorAlert01{left:83px;top:235px;width:471px;height:519px;position:absolute;}
+
+ .goodsErrorAlert01 .goodsErrorAlert01Bg{left:0px;top:0px;width:100%;height:100%;position:absolute;}
+ .goodsErrorAlert01 .alertContentBox{left:0px;top:0%;position:absolute;}
+
+ .goodsErrorAlert01 .alertContentBox .alertGoodsImg{
+    left: 110px;
+    top: 90px;
+    position: absolute;
+    width: 250px;
+ }
+ .goodsErrorAlert01 .alertContentBox .alertContent{
+    left: 40px;
+    top: 367px;
+    position: absolute;
+    font-size: 24px;
+    width: 400px;
+ }
+ .goodsErrorAlert01 .alertContentBox .alertTitle{
+    top: 7px;
+    position: absolute;
+    word-break: keep-all;
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 3px;
+    width: 470px;
+    text-align: center;
+    height: 40px;
+ }
+ .goodsErrorAlert01 .alertcloseBtn{left:411px;top:11px;position:absolute;}
+
+ .trashAlert{left:0px;top:0%;position:absolute;}
+
+ .trashAlert .trashAlert04{left:83px;top:235px;position:absolute;}
+ .trashAlert .trashAlert03{left:83px;top:235px;position:absolute;}
+ .trashAlert .trashAlert02{left:83px;top:235px;position:absolute;}
+ .trashAlert .trashAlert01{left:83px;top:235px;position:absolute;}
+ .trashAlert .closeAlertBtn{left:494px;top:246px;position:absolute;}
+
+ .toalQuestionNum{
+    position: absolute;
+    font-size: 30px;
+    text-shadow: 0 0 1px;
+    left: 82px;
+    top: 140px;
+ }

@@ -1,0 +1,86 @@
+
+.show{-webkit-animation: show .5s;animation: show .5s; -webkit-animation-fill-mode: both;animation-fill-mode: both; }
+@-webkit-keyframes show {
+    0%{ opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes show {
+    0%{ opacity: 0;}
+    100%{opacity: 1;}
+}
+.hide{-webkit-animation: hide .5s;animation: hide .5s; -webkit-animation-fill-mode: both;animation-fill-mode: both; }
+@-webkit-keyframes hide {
+    0%{ opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes hide {
+    0%{ opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@-webkit-keyframes zoomIn {
+    0%{ -webkit-transform: scale(1);}
+    100%{-webkit-transform: scale(1.1);}
+}
+@keyframes zoomIn {
+    0%{ transform: scale(1);}
+    100%{transform: scale(1.1);}
+}
+
+@-webkit-keyframes Y-50 {
+    0%{ -webkit-transform: translateY(-25px); opacity: 0}
+    100%{-webkit-transform: translateY(0px); opacity: 1}
+}
+@keyframes Y-50 {
+    0%{ transform: translateY(-25px); opacity: 0}
+    100%{transform: translateY(0px); opacity: 1}
+}
+@-webkit-keyframes Y50 {
+    0%{ -webkit-transform: translateY(25px); opacity: 0}
+    100%{-webkit-transform: translateY(0px); opacity: 1}
+}
+@keyframes Y50 {
+    0%{ transform: translateY(25px); opacity: 0}
+    100%{transform: translateY(0px); opacity: 1}
+}
+@-webkit-keyframes X50 {
+    0%{ -webkit-transform: translateX(50px); opacity: 0}
+    100%{-webkit-transform: translateX(0px); opacity: 1}
+}
+@keyframes X50 {
+    0%{ transform: translateX(50px); opacity: 0}
+    100%{transform: translateX(0px); opacity: 1}
+}
+
+/* animation-icon */
+.animation-icon{
+   animation: aniicon .8s infinite;
+}
+
+@keyframes aniicon{
+    0%,100%{
+    transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}
+
+.heartbeat{
+    animation:heartbeat 1s infinite;
+ }
+ 
+ @keyframes heartbeat {
+     0% {
+     transform: scale(0.8,0.8);
+     opacity:1;
+ }
+ 25% {
+     transform: scale(1,1);
+     opacity:0.8;
+ }
+ 100% {
+     transform: scale(0.8,0.8);
+     opacity:1;
+ }
+ }
